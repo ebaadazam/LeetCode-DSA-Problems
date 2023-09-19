@@ -13,6 +13,7 @@ Explanation: Your function should return k = 5, with the first five elements of 
 It does not matter what you leave beyond the returned k (hence they are underscores).
 '''
 
+# The time complexity of the code is O(n)
 def remove_duplicates(nums):
     ptr1 = 0
     ptr2 = 0
