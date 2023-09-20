@@ -21,7 +21,7 @@ def majority_elem(nums):
     i = 1
     while i < len(nums):
         if nums[i] == majority:
-            count += 1  # count becomes 0
+            count += 1
             i += 1
         else:
             count -= 1
