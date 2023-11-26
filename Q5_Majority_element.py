@@ -36,13 +36,28 @@ nums = [6, 5, 6]
 print(majority_elem(nums))
 
 
-#
-# # Another Approach (With this approach, the time limit has been exceeded)
-# def majority_element(nums):
-#     n = nums[0]
-#     while n > 0:
-#         if nums.count(n) > (n // 2):
-#             return n
-#
-# nums = [6, 5, 5]
-# print(majority_element(nums))
+# Another Approach (Boyer-Moore Algorithm)
+def majority_element(nums):
+    res, count = 0, 0
+    for i in nums:
+        if count == 0:
+            res = i
+        if i == res:
+            count += 1
+        else:
+            count -= 1
+    return res
+
+nums = [2, 3, 1, 2, 2]
+print(majority_element(nums))
+
+
+# Another Approach (With this approach, the time limit has been exceeded)
+def majority_element(nums):
+    n = nums[0]
+    while n > 0:
+        if nums.count(n) > (n // 2):
+            return n
+
+nums = [6, 5, 5]
+print(majority_element(nums))
